@@ -1,4 +1,10 @@
 import { useState } from "react";
+import {
+  SignedOut,
+  SignedIn,
+  SignInButton,
+  UserButton,
+} from "@clerk/clerk-react";
 import { Image } from "./Image";
 import { Link } from "react-router-dom";
 export const Navbar = () => {
@@ -8,7 +14,7 @@ export const Navbar = () => {
       {/* LOGO  */}
       <Link to="/" className="flex items-center gap-4 text-2xl font-bold ">
         <Image src="/logo.png" alt="Blog-logo" w={32} h={32} />
-        <span>Blogsphere </span>
+        <span>Ayuoria </span>
       </Link>
       {/* Mobile menu  */}
       <div className="md:hidden">
@@ -46,11 +52,18 @@ export const Navbar = () => {
         <Link to="/">Trending </Link>
         <Link to="/">Most Popular</Link>
         <Link to="/">About </Link>
-        <Link to="/">
-          <button className="py-2 px-4 rounded-3xl bg-slate-800 text-white">
-            Login 🖐
-          </button>
-        </Link>
+        <SignedOut>
+          <Link to="/">
+            <button className="py-2 px-4 rounded-3xl bg-slate-800 text-white">
+              Login 🖐
+            </button>
+          </Link>
+
+          {/* <SignInButton /> */}
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
       </div>
     </div>
   );

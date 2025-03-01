@@ -7,3 +7,11 @@ body {
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
 }
+.animateButton {
+  animation-duration: 10000ms;
+}
+/* timepass for main categories div just add animated and any animation*/
+/* .animated {
+  animation-iteration-count: 2;
+  -ms-zoom-animation: initial;
+} */
