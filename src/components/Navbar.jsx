@@ -58,8 +58,6 @@ export const Navbar = () => {
               Login 🖐
             </button>
           </Link>
-
-          {/* <SignInButton /> */}
         </SignedOut>
         <SignedIn>
           <UserButton />
