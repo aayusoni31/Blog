@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import MainCategories from "../components/MainCategories";
 import FeaturedPosts from "../components/FeaturedPosts";
+import PostList from "../components/PostList";
 const Homepage = () => {
   return (
     <div className="mt-4 flex flex-col gap-4">
@@ -25,6 +26,7 @@ const Homepage = () => {
             access with a paywall.
           </p>
         </div>
+
         {/* animated button */}
         <Link to="write" className="relative hidden md:block">
           <svg
@@ -68,6 +70,11 @@ const Homepage = () => {
       {/* // Featured posts  */}
       <FeaturedPosts />
       {/* // Post List  */}
+
+      <div className="">
+        <h1 className="my-8 text-2xl text-gray-600">Recent Posts</h1>
+        <PostList />
+      </div>
     </div>
   );
 };

@@ -1,3 +1,5 @@
+// it is the white line on home page containing the categories
+
 import React from "react";
 import { Link } from "react-router-dom";
 const MainCategories = () => {

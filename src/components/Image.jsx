@@ -11,6 +11,12 @@ export const Image = ({ src, className, h, w, alt }) => {
       alt={alt}
       width={w}
       height={h}
+      transformation={[
+        {
+          width: w,
+          height: h,
+        },
+      ]}
     />
   );
 };
