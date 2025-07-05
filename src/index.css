@@ -15,3 +15,12 @@ body {
   animation-iteration-count: 2;
   -ms-zoom-animation: initial;
 } */
+.ql-container {
+  border: none !important;
+}
+.ql-toolbar {
+  border: none !important;
+}
+.ql-editor {
+  border: none !important;
+}
