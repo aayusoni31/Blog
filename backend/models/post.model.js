@@ -1,3 +1,4 @@
+//Mongoose schema/model for blog posts (user ref, image, title, slug, description, content, etc.).
 import { Schema } from "mongoose";
 import mongoose from "mongoose";
 const postSchema = new Schema(
@@ -31,7 +32,7 @@ const postSchema = new Schema(
       default: false,
     },
     visit: {
-      type: Boolean,
+      type: Number,
       default: 0,
     },
   },

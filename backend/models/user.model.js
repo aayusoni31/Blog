@@ -1,7 +1,13 @@
+//Mongoose schema/model for users (username, email, image, savedPosts)
 import { Schema } from "mongoose";
 import mongoose from "mongoose";
 const userSchema = new Schema(
   {
+    cleerkUserId: {
+      type: String,
+      required: true,
+      unique: true,
+    },
     username: {
       type: String,
       required: true,
