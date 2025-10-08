@@ -6,21 +6,19 @@ Implemented secure login system, post management, and optimized data handling wi
 
 ## Features
 
-- User authentication with Clerk
+
 - Create, read, update, and delete blog posts
 - Featured posts section
 - Category-based post browsing
 - Responsive design for all device sizes
 - Rich text editing for post content
-- MongoDB database integration
+
 
 ## Technologies Used
 
 ### Backend (Node.js/Express)
 
 - **Express.js**: Web framework for Node.js
-- **MongoDB/Mongoose**: Database and ODM
-- **Clerk**: Authentication service
 - **Dotenv**: Environment variable management
 - **SVIX**: Webhook handling
 
@@ -56,36 +54,8 @@ The backend provides RESTful APIs for managing blog content:
 
 - Webhook handling for external services
 
-## Data Models
 
-### User Model
 
-```javascript
-{
-  cleerkUserId: String,  // Clerk user ID
-  username: String,      // User's username
-  email: String,         // User's email
-  img: String,           // User's profile image
-  savedPosts: [String],  // Array of saved post IDs
-  timestamps: true       // Created/updated timestamps
-}
-```
-
-### Post Model
-
-```javascript
-{
-  user: ObjectId,        // Reference to User
-  img: String,           // Post cover image
-  title: String,         // Post title
-  slug: String,          // URL-friendly identifier
-  desc: String,          // Post description
-  content: String,       // Post content (HTML)
-  isFeatured: Boolean,   // Featured post flag
-  visit: Number,         // View count
-  timestamps: true       // Created/updated timestamps
-}
-```
 
 ## Setup and Installation
 
@@ -103,15 +73,9 @@ cd backend
 npm install
 ```
 
-3. Create a `.env` file with the following variables:
 
-```
-MONGO_URI=your_mongodb_connection_string
-CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
-# CLERK_SECRET_KEY=your_clerk_secret_key
-```
 
-4. Start the server:
+3. Start the server:
 
 ```bash
 node index.js
@@ -131,15 +95,9 @@ cd client
 npm install
 ```
 
-3. Create a `.env` file with the following variables:
 
-```
-VITE_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
-VITE_IMAGEKIT_URL_ENDPOINT=your_imagekit_url_endpoint
-VITE_IMAGEKIT_PUBLIC_KEY=your_imagekit_public_key
-```
 
-4. Start the development server:
+3. Start the development server:
 
 ```bash
 npm run dev
@@ -160,7 +118,6 @@ npm run dev
 
 ## Authentication
 
-The application uses Clerk for authentication:
 
 - User registration and login
 - Protected routes for post creation
