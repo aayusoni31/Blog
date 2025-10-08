@@ -1,6 +1,8 @@
 # Blog Application
 
-A full-stack blog application built with React (Vite) for the frontend and Node.js/Express for the backend, using MongoDB as the database. The application features user authentication via Clerk, blog post creation and management, and a responsive UI built with Tailwind CSS.
+Developed a full-stack blog application with authentication, CRUD operations, and image uploads using Node.js, Express, React, and SQL.
+Implemented secure login system, post management, and optimized data handling with deployment on server.
+
 
 ## Features
 
@@ -28,7 +30,6 @@ A full-stack blog application built with React (Vite) for the frontend and Node.
 - **Vite**: Build tool and development server
 - **React Router v7**: Client-side routing
 - **Tailwind CSS**: Utility-first CSS framework
-- **Clerk React**: Authentication components
 - **React Quill**: Rich text editor
 - **ImageKitio**: Image optimization service
 
@@ -107,7 +108,7 @@ npm install
 ```
 MONGO_URI=your_mongodb_connection_string
 CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
-CLERK_SECRET_KEY=your_clerk_secret_key
+# CLERK_SECRET_KEY=your_clerk_secret_key
 ```
 
 4. Start the server:
